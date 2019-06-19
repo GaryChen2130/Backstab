@@ -22,7 +22,7 @@ public class DragScript_Poly : MonoBehaviour
                 select = true;
                 SpriteRenderer mace_sprite = gameObject.GetComponent<SpriteRenderer>();
                 mace_sprite.sortingOrder = 4;
-                gameObject.name = "";
+                //gameObject.name = "";
                 Destroy(GameObject.Find("select_saw"));
                 Destroy(GameObject.Find("select_flat_block"));
                 Destroy(GameObject.Find("select_right_slide"));
@@ -61,6 +61,12 @@ public class DragScript_Poly : MonoBehaviour
     void OnMouseUp()
     {
         drag_or_not = false;
+        if (gameObject.name == "select_mace")
+        {
+            MaceScript ms = gameObject.GetComponent<MaceScript>();
+            ms.mace_position_y = transform.position.y;
+            gameObject.name = "";
+        }
         if (select)
         {
             Debug.Log("" + GameData.playing_player);
@@ -72,5 +78,6 @@ public class DragScript_Poly : MonoBehaviour
             }
             select = false;
         }
+
     }
 }

@@ -48,11 +48,11 @@ public class SelectItem : MonoBehaviour
 
     void Create_Item()
     {
-        GameObject saw = Instantiate(saw_instantiate, new Vector3(212,327,0), Quaternion.identity);
-        GameObject mace = Instantiate(mace_instantiate, new Vector3(578,327,0), Quaternion.identity);
+        GameObject saw = Instantiate(saw_instantiate, new Vector3(212,282,0), Quaternion.identity);
+        GameObject mace = Instantiate(mace_instantiate, new Vector3(600,282,0), Quaternion.identity);
         GameObject flat_block = Instantiate(flat_block_instantiate, new Vector3(138,738,0), Quaternion.identity);
         GameObject right_slide = Instantiate(right_slide_instantiate, new Vector3(578, 813, 0), Quaternion.identity);
-        GameObject sending_door = Instantiate(sending_door_instantiate, new Vector3(1420, 696, 0), Quaternion.identity);
+        GameObject sending_door = Instantiate(sending_door_instantiate, new Vector3(1320, 650, 0), Quaternion.identity);
         saw.name = ("select_saw");
         mace.name = ("select_mace");
         flat_block.name = ("select_flat_block");

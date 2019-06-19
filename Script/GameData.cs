@@ -17,6 +17,7 @@ public class GameData : MonoBehaviour
     public static int winner;
     public static bool show_score;
     public static int game_round;
+    public static string end_msg;
     // Start is called before the first frame update
     void Start()
     {

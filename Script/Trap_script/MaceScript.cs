@@ -6,7 +6,7 @@ public class MaceScript : MonoBehaviour
 {
     public GameObject mace;
     public float move;
-    private float mace_position_y;
+    public float mace_position_y;
     // Start is called before the first frame update
     void Start()
     {

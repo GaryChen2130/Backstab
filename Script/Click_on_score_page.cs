@@ -27,8 +27,9 @@ public class Click_on_score_page : MonoBehaviour
         }
     }
 
-    private void OnMouseUp()
+    private void OnMouseDown()
     {
+        Debug.Log("Hi U");
         if (GameData.show_score)
         {
             check = false;

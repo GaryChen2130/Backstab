@@ -94,8 +94,31 @@ public class GameController : MonoBehaviour
             //print score page
             GameData.winner = -1;
 
-            if(gameover)
+            if (gameover)
+            {
+                int max = 0,max_index = 0;
+                for (int i = 0; i < GameData.player_num; ++i) {
+                    if (max < GameData.player_score[i]) {
+                        max = GameData.player_score[i];
+                        max_index = i;
+                    }
+                }
+
+                GameData.end_msg = "";
+                for (int i = 0; i < GameData.player_num; ++i)
+                {
+                    if (GameData.player_score[i] == max)
+                    {
+                        if(i != max_index)
+                            GameData.end_msg += "and ";
+                        GameData.end_msg += "Player" + (i+1).ToString() + " ";
+                    }
+                }
+                GameData.end_msg += "Win";
+                Debug.Log(GameData.end_msg);
+
                 SceneManager.LoadScene("end_scene", 0);
+            }
 
         }
 

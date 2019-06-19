@@ -10,7 +10,7 @@ public class SelectController : MonoBehaviour
     public Button left;
     public Button right;
     public Button up;
-    public Button down;
+    //public Button down;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class SelectController : MonoBehaviour
             left.gameObject.SetActive(false);
             right.gameObject.SetActive(false);
             up.gameObject.SetActive(false);
-            down.gameObject.SetActive(false);
+            //down.gameObject.SetActive(false);
             select_page.gameObject.SetActive(true);
         }
         else
@@ -36,7 +36,7 @@ public class SelectController : MonoBehaviour
             left.gameObject.SetActive(true);
             right.gameObject.SetActive(true);
             up.gameObject.SetActive(true);
-            down.gameObject.SetActive(true);
+            //down.gameObject.SetActive(true);
             select_page.gameObject.SetActive(false);
         }
     }
